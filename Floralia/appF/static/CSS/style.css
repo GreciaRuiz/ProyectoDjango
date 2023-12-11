@@ -1,0 +1,47 @@
+:root{
+    --background-color: #C1EAF4;
+    --primary-color: #53FF84;
+    --highlight-color: #F8AAF5;
+}
+a{
+	text-decoration: none;
+	color: #6B654B;
+}
+section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+nav{
+	background-color: var(--highlight-color);
+}
+
+mark{
+	border-radius: 5px;
+	background-color: #fdf6e7;
+	color: #231f20;
+}
+footer{
+	padding-top: 10px ;
+}
+.pad_color{
+	padding: 5px 20px;
+	background-color: var(--highlight-color);
+}
+.btn_flo{
+	background-color: var(--background-color);
+	color: black;
+}
+.color_flo{
+	background-color: var(--background-color);
+}
+
+.buscar{
+	color: #6B654B;
+	background-color: var(--background-color);
+}
+.logo_flo{
+	margin-top: -100%;
+}
+/*primer section con 4 cards, segundo section con carrusel,
+ modal (tipo alerta),colapse, acordeon, carrusel, footer*/
