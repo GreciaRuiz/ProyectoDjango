@@ -20,3 +20,8 @@ def proveedores(request):
 	proveedores=Proveedor.objects.all()
 	p={'proveedores':proveedores}
 	return render(request, 'proveedores.html', p)
+
+def detalle(request):
+	return render (request, "detalle.html")
+# Create your views here.
+

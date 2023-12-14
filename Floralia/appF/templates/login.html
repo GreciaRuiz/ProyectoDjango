@@ -1,10 +1,10 @@
 {% extends "plantilla.html" %}
-
+{% load static %}
 {% block title %}Plantas{% endblock %}
 
 {% block content %}
 	<nav>
-		<a href="./index.html"><img src="./img/Logo.svg" alt="logo"></a>
+		<a href="{% url 'Inicio' %}"><img src="{% static '/img/logo.png' %}" alt="logo"></a>
 	</nav>
 	<div class="form-wrapper">
 		<h2>Inicia sesión</h2>
@@ -21,14 +21,8 @@
 				<label>Contraseña</label>
 			</div>
 			<button id="btn" type="submit"><a href="./user/index.html">Iniciar sesión</a></button>
-			<div class="form-help">
-				<div class="remember-me">
-					<input type="checkbox" id="remember-me">
-					<label for="remember-me">Recuérdame.</label>
-				</div>					
-			</div>
 		</form>
-		<p>¿Primera vez?<a href={% url 'registro' %}> Suscríbete ahora.</a></p>
+		<p>¿No tiene cuenta?<a href="{% url 'registro' %}"> Crear cuenta.</a></p>
 	</div>
 	<script>
 		function loguear(){    
