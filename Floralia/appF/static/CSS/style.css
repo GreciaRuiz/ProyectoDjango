@@ -5,15 +5,26 @@
 }
 body{
 	background-color: #f9ebea;
+	position: relative;
+	padding-bottom: 80px;
+	min-height: 100vh;
 }
 a{
 	text-decoration: none;
 	color: #6B654B;
 }
-section{
+.col4{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+}
+.margen{
+	margin-left: 20px;
+}
+footer{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
 }
 nav{
 	background-color: var(--highlight-color);

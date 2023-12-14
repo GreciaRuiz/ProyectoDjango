@@ -1,0 +1,44 @@
+{% extends "plantilla.html" %}
+{% load static %}
+{% block title %}Proveeedores{% endblock %}
+
+{% block content %}
+<br>
+<div id="div2" class="container text-center">
+  <div class="row align-items-start">
+    <div class="col-2">
+    </div>
+    <div class="col-8">
+      <h2>Proveeedores</h2>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">E-Mail</th>
+            <th scope="col">Dirección</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in proveedores %}
+          <tr>
+            <th scope="row">{{ p.id }}</th>
+            <td>{{ p.nombre }}</td>
+            <td>{{ p.telefono }}</td>
+            <td>{{ p.mail }}</td>
+            <td>{{ p.direccion }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    
+    </div>
+    <div class="col-2">
+
+    </div>
+  </div>
+</div>
+<br>
+{% endblock %}
