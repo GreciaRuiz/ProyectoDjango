@@ -14,4 +14,7 @@ def macetas(request):
 
 def login(request):
 	return render (request, "login.html")
+
+def detalle(request):
+	return render (request, "detalle.html")
 # Create your views here.
