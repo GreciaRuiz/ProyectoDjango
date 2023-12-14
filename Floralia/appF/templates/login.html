@@ -1,0 +1,41 @@
+{% extends "plantilla.html" %}
+
+{% block title %}Plantas{% endblock %}
+
+{% block content %}
+	<nav>
+		<a href="./index.html"><img src="./img/Logo.svg" alt="logo"></a>
+	</nav>
+	<div class="form-wrapper">
+		<h2>Inicia sesión</h2>
+		<form action="#">
+			<div class="form-control">
+				<input type="text" required oninvalid="setCustomValidity('Ingresa un email o un número de teléfono válido.')"
+				oninput="setCustomValidity('')">
+				<label>Email</label>
+			</div>
+			<div class="form-control">
+				<input type="password" required
+				oninvalid="setCustomValidity('La contraseña debe tener entre 4 y 60 caracteres.')"
+				oninput="setCustomValidity('')">
+				<label>Contraseña</label>
+			</div>
+			<button id="btn" type="submit"><a href="./user/index.html">Iniciar sesión</a></button>
+			<div class="form-help">
+				<div class="remember-me">
+					<input type="checkbox" id="remember-me">
+					<label for="remember-me">Recuérdame.</label>
+				</div>					
+			</div>
+		</form>
+		<p>¿Primera vez en Pelix?<a href={% url 'registro' %}> Suscríbete ahora.</a></p>
+	</div>
+	<script>
+		function loguear(){    
+    	window.location.replace("./user/index.html");
+		}
+		const registrar_btn = document.getElementById("btn");
+		registrar_btn.addEventListener("click",loguear);
+	</script>
+
+{% endblock %}

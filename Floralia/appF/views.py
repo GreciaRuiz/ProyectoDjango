@@ -11,4 +11,7 @@ def plantas(request):
 
 def macetas(request):
 	return render (request, "macetas.html")
+
+def login(request):
+	return render (request, "login.html")
 # Create your views here.

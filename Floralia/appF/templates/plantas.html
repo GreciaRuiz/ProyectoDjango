@@ -1,18 +1,19 @@
 {% extends "plantilla.html" %}
-
+{% load static %}
 {% block title %}Plantas{% endblock %}
 
 {% block content %}
 
 <br>
+
 	<section id="cactus">
 		<div class="card pad_color" style="width: 18rem;">
-  <img class="card-img-top" src="./IMG/viejo.png" alt="Card image cap">
+  <img class="card-img-top" src="{% static '/IMG/viejo.png' %}" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Oreocereus Trolli</h5>
-    <p class="card-text">Cactus viejito.</p>
-    <a target= "_blank" href="https://wa.me/qr/H6X7ZNRXEXW6L1" class="btn btn_flo">Novedades</a>
-    <a target= "_blank" href="https://wa.me/qr/H6X7ZNRXEXW6L1" class="btn btn_flo">Novedades</a>
+    <h5 class="card-title">Nombre</h5>
+    <p class="card-text">Precio.</p>
+    <a target= "_blank" href="https://wa.me/qr/H6X7ZNRXEXW6L1" class="btn btn_flo">Ver más</a>
+    <a target= "_blank" href="https://wa.me/qr/H6X7ZNRXEXW6L1" class="btn btn_flo">Carrito</a>
   </div>
 </div>
 <div class="card pad_color" style="width: 18rem;">
@@ -45,7 +46,7 @@
 
   <section id="suculentas">
     <div class="card pad_color" style="width: 18rem;">
-  <img class="card-img-top" src="./IMG/dion.png" alt="Card image cap">
+  <img class="card-img-top" src="{% static '/IMG/dion.png' %}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Oreocereus Trolli</h5>
     <p class="card-text">Cactus viejito.</p>

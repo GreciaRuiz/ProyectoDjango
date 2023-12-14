@@ -12,7 +12,7 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="index.html"><img class="logo_flor" src="{% static 'IMG/logo.png' %}" width="115px" height="45px"></a>
+  <a class="navbar-brand" href="{% url 'Inicio' %}"><img class="logo_flor" src="{% static 'IMG/logo.png' %}" width="115px" height="45px"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -24,9 +24,9 @@
           Plantas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="plantas.html#cactus">Cactus</a>
-          <a class="dropdown-item" href="plantas.html#suculentas">Suculentas</a>
-          <a class="dropdown-item" href="plantas.html#interior">Plantas de interior</a>
+          <a class="dropdown-item" href="{% url 'plantas' %}#cactus">Cactus</a>
+          <a class="dropdown-item" href="{% url 'plantas' %}#suculentas">Suculentas</a>
+          <a class="dropdown-item" href="{% url 'plantas' %}#interior">Plantas de interior</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -34,8 +34,8 @@
           Macetas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="macetas.html#pla">Plásticas</a>
-          <a class="dropdown-item" href="macetas.html#terra">Terracota</a>
+          <a class="dropdown-item" href="{% url 'macetas' %}#pla">Plásticas</a>
+          <a class="dropdown-item" href="{% url 'macetas' %}#terra">Terracota</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -50,8 +50,9 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-      <button class="btn my-2 my-sm-0 buscar" type="submit">Buscar</button>
+      <button class="btn my-2 my-sm-0 buscar" type="submit"><img src="{% static 'IMG/search.svg' %}"></button>
     </form>
+    <a href="{% url 'login' %}" class="btn btn_flo"><img src="{% static 'IMG/person-circle.svg' %}"></a>
   </div>
 </nav>
 </header>
