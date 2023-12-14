@@ -3,6 +3,9 @@
     --primary-color: #53FF84;
     --highlight-color: #F8AAF5;
 }
+body{
+	background-color: #f9ebea;
+}
 a{
 	text-decoration: none;
 	color: #6B654B;
@@ -18,9 +21,9 @@ nav{
 
 mark{
 	border-radius: 5px;
-	background-color: #fdf6e7;
 	color: #231f20;
 }
+
 footer{
 	padding-top: 10px ;
 }

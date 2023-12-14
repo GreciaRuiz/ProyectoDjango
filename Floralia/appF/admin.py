@@ -6,7 +6,8 @@ class ProveedorAdmin(admin.ModelAdmin):
 	search_fields=('nombre','productos')
 
 class UsuarioAdmin(admin.ModelAdmin):
-	list_display=('email', 'nombre', 'apellido', 'userName', 'password')
+	list_display=('email', 'nombre', 'apellido', 'password')
+
 
 
 admin.site.register(Proveedor,ProveedorAdmin)
