@@ -5,7 +5,6 @@ class Proveedor(models.Model):
 	telefono=models.CharField(max_length=25)
 	mail=models.CharField(max_length=50)
 	direccion=models.CharField(max_length=80)
-	productos=models.CharField(max_length=100)
 
 	class Meta:
 		verbose_name_plural: 'Proveedores'
@@ -28,9 +27,8 @@ class Usuario(models.Model):
 class Producto(models.Model):
 	nombre= models.CharField(max_length=50)
 	descrip= models.CharField(max_length=100)
-	stock= models.IntegerField(max_length=5)
-	precio= models.IntegerField(max_length=6)
-	
+	stock= models.IntegerField()
+	precio= models.IntegerField()
 	class Meta:
 		verbose_name_plural: 'Productos'
 
